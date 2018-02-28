@@ -1,0 +1,62 @@
+
+<h3 class="title-head text-center">Pesan Tiket Bus Sekarang!</h3>
+<div layout="row" layout-xs="column">
+  <div flex layout-margin layout-padding ng-controller="pemesanan">
+    <ng-include src="'pages/partials/message.html'"></ng-include>
+    <form ng-submit="submit()">
+      <md-input-container class="md-block" flex-gt-sm >
+        <label>Nama lengkap</label>
+        <input ng-model="pemesanan.nm_user" type="text" required>
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>No. Handphone</label>
+        <input ng-model="pemesanan.no_hp" type="text" required>
+      </md-input-container>
+      <md-autocomplete 
+            ng-model="pemesanan.kd_rute"
+            md-autoselect="true" 
+            placeholder="Kota Asal - Kota Tujuan" 
+            md-item-text="item.display | uppercase" 
+            md-items="item in items" 
+            md-menu-class="autocomplete-custom-template" 
+            md-min-length="2" 
+            md-delay="throttle" 
+            md-search-text="searchText" 
+            md-search-text-change="searchTextChange(searchText)" 
+            md-select-on-match="true" 
+            md-match-case-insensitive="false" 
+            md-selected-item-change="selectedItemChange(item)" 
+            md-selected-item="selectedItem" 
+            required>
+        <md-item-template>
+          <span class="item-title">
+            <span md-highlight-flags="^i" md-highlight-text="searchText">
+              {{ item.display | uppercase }}
+            </span>
+          </span>
+        </md-item-template>
+        <md-not-found>
+          Tidak Ada.
+        </md-not-found>
+      </md-autocomplete>
+      <br>
+      <md-input-container class="md-block" flex-gt-sm >
+        <label>Email</label>
+        <input ng-model="pemesanan.email" type="email" required>
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Password</label>
+        <input ng-model="pemesanan.password" type="password" required>
+      </md-input-container>
+      <div layout="row" layout-align="end center">
+        <md-input-container>
+          <md-button class="md-raised md-primary" type="submit">Pesan</md-button>
+        </md-input-container>
+      </div>
+    </form>
+    <ng-include src="'pages/partials/message.html'"></ng-include>
+  </div>
+  <div flex layout-margin layout-padding>
+    <img src="https://kit8.net/images/detailed/1/Booking_online_flat_vector_illustration.png">
+  </div>
+</div>

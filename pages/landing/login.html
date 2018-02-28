@@ -1,0 +1,40 @@
+<h3 class="title-head text-center">Login!</h3>
+<div layout="row" layout-xs="column">
+  <div flex layout-margin layout-padding>
+  </div>
+  <div flex layout-margin layout-padding>
+    <form name="loginForm" ng-controller="LoginCtrl" ng-submit="submit()" novalidate>
+      <md-input-container class="md-block" flex-gt-sm >
+        <label>E-Mail</label>
+        <input ng-model="user.email" type="text" required>
+      </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Password</label>
+        <input ng-model="user.password" type="password" required>
+      </md-input-container>
+      <div layout="row" layout-align="end center">
+        <md-input-container>
+          <md-button class="md-raised md-primary" type="submit">Login</md-button>
+        </md-input-container>
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  <div flex layout-margin layout-padding>
+  </div>
+</div>
+
+
+<button ng-click="authenticate('facebook')">Sign in with Facebook</button>
+<button ng-click="authenticate('google')">Sign in with Google</button>
+<button ng-click="authenticate('github')">Sign in with GitHub</button>
+<button ng-click="authenticate('linkedin')">Sign in with LinkedIn</button>
+<button ng-click="authenticate('instagram')">Sign in with Instagram</button>
+<button ng-click="authenticate('twitter')">Sign in with Twitter</button>
+<button ng-click="authenticate('foursquare')">Sign in with Foursquare</button>
+<button ng-click="authenticate('yahoo')">Sign in with Yahoo</button>
+<button ng-click="authenticate('live')">Sign in with Windows Live</button>
+<button ng-click="authenticate('twitch')">Sign in with Twitch</button>
+<button ng-click="authenticate('bitbucket')">Sign in with Bitbucket</button>
+<button ng-click="authenticate('spotify')">Sign in with Spotify</button>
+

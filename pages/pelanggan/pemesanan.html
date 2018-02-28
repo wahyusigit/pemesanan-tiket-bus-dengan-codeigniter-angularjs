@@ -1,0 +1,53 @@
+
+<div class="row" ng-controller="pelanggan-pemesanan">
+  <div class="col-md-3">
+    <button ng-click="test()">test</button>
+    <div class="form-group">
+      <a ng-href="/pelanggan/pemesanan">
+        <button type="button" class="btn std-btn btn-lg btn-filled btn-block">Pemesanan</button>
+      </a>
+    </div>
+    <div class="form-group">
+      <a ng-href="/pelanggan/konfirmasi">
+        <button type="button" class="btn std-btn btn-lg btn-filled btn-block">Konfirmasi</button>
+      </a>
+    </div>
+    <div class="form-group">
+      <a ng-href="/pelanggan/tiket">
+        <button type="button" class="btn std-btn btn-lg btn-filled btn-block">Tiket</button>
+      </a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <div class="table-responsive mtb">
+      <table class="table">
+          <thead class="thead-default">
+              <tr>
+                  <th class="text-center">No.</th>
+                  <th class="text-center">Kode<br>Pemesanan</th>
+                  <th class="text-center">Tanggal<br>Pemesanan</th>
+                  <th class="text-center">Tanggal<br>Keberangkatan</th>
+                  <th class="text-center">Rute / Trayek</th>
+                  <th class="text-center">Harga</th>
+                  <th class="text-center">Status Pembayaran</th>
+                  <th class="text-center">Action</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(key, pms) in pemesanan">
+              <td>{{ key+1 }}</td>
+              <td>{{ pms.no_pemesanan }}</td>
+              <td>{{ pms.tgl_pemesanan }}</td>
+              <td>{{ pms.tgl_keberangkatan }}</td>
+              <td>{{ pms.kota_asal }} - {{ pms.kota_tujuan }}</td>
+              <td>{{ pms.harga }}</td>
+              <td>'atststs'</td>
+              <td>'asssss'</td>
+            </tr>
+              
+          </tbody>
+      </table>
+</div>
+
+  </div>
+</div>

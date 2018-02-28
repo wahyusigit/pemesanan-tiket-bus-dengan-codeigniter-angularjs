@@ -1,0 +1,8 @@
+<div ng-show="message.show" class="massage-box alert-{{ message.type }}">
+	<strong><i class="fa fa-check"></i>{{ message.title }}</strong>
+	<p>{{ message.content }}</p>
+	<a ng-href="login" ng-show="message.button" type="button" class="btn std-btn btn-sm btn-warning-filled">
+		<i class="fa fa-download icons"></i>
+	Login
+	</a>
+</div>
